@@ -33,13 +33,13 @@ public partial class McDataBaseContext : DbContext
     {
         modelBuilder.Entity<ClientOrder>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__ClientOr__3214EC27C8D7FFA3");
+            entity.HasKey(e => e.Id).HasName("PK__ClientOr__3214EC27A8B1D709");
 
             entity.ToTable("ClientOrder");
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.DeliveryMoment).HasColumnType("datetime");
-            entity.Property(e => e.Moment).HasColumnType("datetime");
+            entity.Property(e => e.FinishMoment).HasColumnType("datetime");
             entity.Property(e => e.OrderCode)
                 .IsRequired()
                 .HasMaxLength(12)
@@ -54,7 +54,7 @@ public partial class McDataBaseContext : DbContext
 
         modelBuilder.Entity<ClientOrderItem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__ClientOr__3214EC27FC87B92D");
+            entity.HasKey(e => e.Id).HasName("PK__ClientOr__3214EC27E813DB3C");
 
             entity.ToTable("ClientOrderItem");
 
@@ -75,7 +75,7 @@ public partial class McDataBaseContext : DbContext
 
         modelBuilder.Entity<MenuItem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__MenuItem__3214EC27F44E0D66");
+            entity.HasKey(e => e.Id).HasName("PK__MenuItem__3214EC279C5AE448");
 
             entity.ToTable("MenuItem");
 
@@ -97,7 +97,7 @@ public partial class McDataBaseContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Product__3214EC27AF42B795");
+            entity.HasKey(e => e.Id).HasName("PK__Product__3214EC27F38C8219");
 
             entity.ToTable("Product");
 
@@ -114,7 +114,7 @@ public partial class McDataBaseContext : DbContext
 
         modelBuilder.Entity<Store>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Store__3214EC2711A92A42");
+            entity.HasKey(e => e.Id).HasName("PK__Store__3214EC271DF907DA");
 
             entity.ToTable("Store");
 
